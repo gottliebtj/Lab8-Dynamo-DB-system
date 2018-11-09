@@ -1,0 +1,96 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      ServerlessReactExampleCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: ServerlessReactExampleCRUD
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /ServerlessReactExample: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/rverlessReactExample-20181107110901.zip
+            description: 'Handler for calls to resource path : /ServerlessReactExample/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: WSoCotfNiTeiS9VTdml11FT67e0pdcaaXyqzSHWuKiE=
+            memorySize: '128'
+            modified: '2018-11-07T17:09:31.691+0000'
+            name: rverlessReactExample
+            runtime: nodejs6.10
+            timeout: '3'
+            version: Z41c9j5n6xy_29xD3cgg3CW0lH3XEUUR
+          '/ServerlessReactExample/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/rverlessReactExample-20181107110901.zip
+            description: 'Handler for calls to resource path : /ServerlessReactExample/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: WSoCotfNiTeiS9VTdml11FT67e0pdcaaXyqzSHWuKiE=
+            memorySize: '128'
+            modified: '2018-11-07T17:09:31.691+0000'
+            name: rverlessReactExample
+            runtime: nodejs6.10
+            timeout: '3'
+            version: _IeS2wS5C4Zp..YqeY6l02N5GA3C3zab
+      sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: sampleCloudApi
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /items: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20181107110534.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: OhIUlxCVyd9fpB5g33MoO2tVNf30ZFT3QVs948K8G3I=
+            memorySize: '128'
+            modified: '2018-11-07T17:09:31.702+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: m5AtvsouOc5Npylnt97I6Qk54PdzRzYA
+          '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20181107110534.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: OhIUlxCVyd9fpB5g33MoO2tVNf30ZFT3QVs948K8G3I=
+            memorySize: '128'
+            modified: '2018-11-07T17:09:31.702+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: EiLQUE1HYODYlGW_Vd5mJW7JhiBEkluc
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  database: !com.amazonaws.mobilehub.v0.Database 
+    components:
+      database-nosql: !com.amazonaws.mobilehub.v0.NoSQLDatabase 
+        tables:
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              ID: S
+              ItemDescription: S
+              ItemName: S
+              ItemPrice: N
+            hashKeyName: ID
+            hashKeyType: S
+            rangeKeyName: ''
+            rangeKeyType: ''
+            tableName: ___DYNAMIC_PREFIX___-ServerlessReactExample
+            tablePrivacy: public
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn {}
+name: quiz-bank
+region: us-east-1
